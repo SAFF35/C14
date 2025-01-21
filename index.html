@@ -13,26 +13,31 @@
         }
 
         body {
-            background-color: #fff8e1; /* Warna dasar background tubuh */
-            padding: 20px 10px;
+            background-color: #fff8e1;
+            margin: 0;
+            padding: 0;
         }
 
         /* Warna background untuk tiap section (LB lebih gelap dari kontainer) */
         .section-1 {
-            background-color: #ffecb3; /* LB Oranye muda */
+            background-color: #ffecb3; /* Kuning tua */
             padding: 20px 10px;
+            position: relative;
         }
         .section-2 {
-            background-color: #ffd54f; /* LB Oranye medium */
+            background-color: #ffd54f; /* Hijau kekuningan */
             padding: 20px 10px;
+            position: relative;
         }
         .section-3 {
-            background-color: #ffb300; /* LB Oranye lebih gelap */
+            background-color: #ffb300; /* Oranye gelap */
             padding: 20px 10px;
+            position: relative;
         }
         .section-4 {
-            background-color: #ff6f00; /* LB Oranye tua */
+            background-color: #ff6f00; /* Oranye tua */
             padding: 20px 10px;
+            position: relative;
         }
 
         /* Style paragraf */
@@ -40,7 +45,7 @@
             margin: 0 auto;
             padding: 20px;
             text-align: center;
-            color: #ffffff; /* Teks putih */
+            color: #ffffff;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
             font-size: 1.2em;
@@ -48,18 +53,18 @@
             max-width: 600px;
         }
 
-        /* Warna gradasi cerah untuk container */
+        /* Warna gradasi cerah untuk kontainer */
         .paragraf-1 {
-            background: linear-gradient(90deg, #ffe082, #ffd54f); /* Kontainer Oranye muda cerah */
+            background: linear-gradient(90deg, #ffe082, #ffd54f);
         }
         .paragraf-2 {
-            background: linear-gradient(90deg, #ffca28, #ffc107); /* Kontainer Oranye medium cerah */
+            background: linear-gradient(90deg, #ffca28, #ffc107);
         }
         .paragraf-3 {
-            background: linear-gradient(90deg, #ffa000, #ff8f00); /* Kontainer Oranye lebih gelap cerah */
+            background: linear-gradient(90deg, #ffa000, #ff8f00);
         }
         .paragraf-4 {
-            background: linear-gradient(90deg, #f57c00, #ef6c00); /* Kontainer Oranye tua */
+            background: linear-gradient(90deg, #f57c00, #ef6c00);
         }
 
         /* Teks judul tebal */
@@ -68,70 +73,52 @@
             font-size: 1.3em;
         }
 
-        /* Garis pemisah (benang kusut bercahaya, warna sesuai LB section) */
-        .separator {
+        /* Pemisah berbentuk kertas sobek */
+        .torn-separator {
             width: 100%;
             height: 50px;
-            position: relative;
-            overflow: hidden;
-        }
-        .separator::before {
-            content: '';
-            position: absolute;
-            width: 200%;
-            height: 50px;
-            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="500" height="50"><path d="M0 25 Q50 0 100 25 T500 25" stroke="white" stroke-width="1" fill="none"/><path d="M0 25 Q50 50 100 25 T500 25" stroke="white" stroke-width="1" fill="none"/><path d="M0 15 Q40 35 120 5 T500 15" stroke="white" stroke-width="1" fill="none"/></svg>');
+            background-repeat: no-repeat;
             background-size: cover;
-            animation: blink 0.3s infinite alternate;
         }
-
-        /* Animasi berkedip cepat */
-        @keyframes blink {
-            0% {
-                opacity: 1;
-            }
-            50% {
-                opacity: 0.3;
-            }
-            100% {
-                opacity: 1;
-            }
+        .torn-separator-1 {
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120"><path fill="%23ffecb3" d="M0,32L60,37.3C120,43,240,53,360,90.7C480,128,600,192,720,181.3C840,171,960,85,1080,53.3C1200,21,1320,43,1380,53.3L1440,64L1440,120L1380,120C1320,120,1200,120,1080,120C960,120,840,120,720,120C600,120,480,120,360,120C240,120,120,120,60,120L0,120Z"/><path fill="%23ffd54f" d="M0,96L60,101.3C120,107,240,117,360,133.3C480,149,600,171,720,165.3C840,160,960,128,1080,112C1200,96,1320,96,1380,96L1440,96L1440,120L1380,120C1320,120,1200,120,1080,120C960,120,840,120,720,120C600,120,480,120,360,120C240,120,120,120,60,120L0,120Z"/></svg>');
+        }
+        .torn-separator-2 {
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120"><path fill="%23ffd54f" d="M0,32L60,37.3C120,43,240,53,360,90.7C480,128,600,192,720,181.3C840,171,960,85,1080,53.3C1200,21,1320,43,1380,53.3L1440,64L1440,120L1380,120C1320,120,1200,120,1080,120C960,120,840,120,720,120C600,120,480,120,360,120C240,120,120,120,60,120L0,120Z"/><path fill="%23ffb300" d="M0,96L60,101.3C120,107,240,117,360,133.3C480,149,600,171,720,165.3C840,160,960,128,1080,112C1200,96,1320,96,1380,96L1440,96L1440,120L1380,120C1320,120,1200,120,1080,120C960,120,840,120,720,120C600,120,480,120,360,120C240,120,120,120,60,120L0,120Z"/></svg>');
+        }
+        .torn-separator-3 {
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 120"><path fill="%23ffb300" d="M0,32L60,37.3C120,43,240,53,360,90.7C480,128,600,192,720,181.3C840,171,960,85,1080,53.3C1200,21,1320,43,1380,53.3L1440,64L1440,120L1380,120C1320,120,1200,120,1080,120C960,120,840,120,720,120C600,120,480,120,360,120C240,120,120,120,60,120L0,120Z"/><path fill="%23ff6f00" d="M0,96L60,101.3C120,107,240,117,360,133.3C480,149,600,171,720,165.3C840,160,960,128,1080,112C1200,96,1320,96,1380,96L1440,96L1440,120L1380,120C1320,120,1200,120,1080,120C960,120,840,120,720,120C600,120,480,120,360,120C240,120,120,120,60,120L0,120Z"/></svg>');
         }
     </style>
 </head>
 <body>
 
-    <!-- Section 1 -->
     <div class="section-1">
         <div class="paragraf paragraf-1">
-            <p><span>Burung:</span> Burung adalah hewan yang dikenal dengan kemampuan terbangnya. Mereka memiliki sayap yang memungkinkan mereka untuk menjelajahi langit. Burung juga memiliki berbagai macam suara yang bisa digunakan untuk berkomunikasi atau menarik perhatian pasangannya.</p>
+            <p><span>Burung:</span> Burung adalah hewan yang dikenal dengan kemampuan terbangnya...</p>
         </div>
+        <div class="torn-separator torn-separator-1"></div>
     </div>
-    <div class="separator"></div>
 
-    <!-- Section 2 -->
     <div class="section-2">
         <div class="paragraf paragraf-2">
-            <p><span>Ular:</span> Ular adalah reptil yang memiliki tubuh panjang dan ramping. Mereka tidak memiliki kaki, tetapi bergerak dengan cara melata. Ular seringkali ditemukan di hutan atau gurun, dan beberapa jenis ular berbahaya dengan bisa yang mematikan.</p>
+            <p><span>Ular:</span> Ular adalah reptil yang memiliki tubuh panjang...</p>
         </div>
+        <div class="torn-separator torn-separator-2"></div>
     </div>
-    <div class="separator"></div>
 
-    <!-- Section 3 -->
     <div class="section-3">
         <div class="paragraf paragraf-3">
-            <p><span>Kodok:</span> Kodok adalah amfibi yang biasanya hidup di dekat perairan. Mereka memiliki kulit yang lembab dan tubuh yang cenderung gemuk. Kodok dikenal dengan loncatannya yang tinggi dan suaranya yang khas saat musim kawin.</p>
+            <p><span>Kodok:</span> Kodok adalah amfibi yang biasanya hidup di dekat perairan...</p>
         </div>
+        <div class="torn-separator torn-separator-3"></div>
     </div>
-    <div class="separator"></div>
 
-    <!-- Section 4 -->
     <div class="section-4">
         <div class="paragraf paragraf-4">
-            <p><span>Ayam:</span> Ayam adalah unggas yang sering dijadikan hewan peliharaan dan sumber pangan. Mereka memiliki bulu yang halus dan kokok yang khas. Ayam juga menghasilkan telur yang berguna sebagai makanan sehari-hari.</p>
+            <p><span>Ayam:</span> Ayam adalah unggas yang sering dijadikan hewan peliharaan...</p>
         </div>
     </div>
-    <div class="separator"></div>
 
 </body>
 </html>
