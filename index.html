@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deskripsi Hewan</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #fff8e1; /* Warna dasar background tubuh */
+            padding: 20px 10px;
+        }
+
+        /* Warna background untuk tiap section (LB lebih gelap dari kontainer) */
+        .section-1 {
+            background-color: #ffecb3; /* LB Oranye muda */
+            padding: 20px 10px;
+        }
+        .section-2 {
+            background-color: #ffd54f; /* LB Oranye medium */
+            padding: 20px 10px;
+        }
+        .section-3 {
+            background-color: #ffb300; /* LB Oranye lebih gelap */
+            padding: 20px 10px;
+        }
+        .section-4 {
+            background-color: #ff6f00; /* LB Oranye tua */
+            padding: 20px 10px;
+        }
+
+        /* Style paragraf */
+        .paragraf {
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+            color: #ffffff; /* Teks putih */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            font-size: 1.2em;
+            width: 90%;
+            max-width: 600px;
+        }
+
+        /* Warna gradasi cerah untuk container */
+        .paragraf-1 {
+            background: linear-gradient(90deg, #ffe082, #ffd54f); /* Kontainer Oranye muda cerah */
+        }
+        .paragraf-2 {
+            background: linear-gradient(90deg, #ffca28, #ffc107); /* Kontainer Oranye medium cerah */
+        }
+        .paragraf-3 {
+            background: linear-gradient(90deg, #ffa000, #ff8f00); /* Kontainer Oranye lebih gelap cerah */
+        }
+        .paragraf-4 {
+            background: linear-gradient(90deg, #f57c00, #ef6c00); /* Kontainer Oranye tua */
+        }
+
+        /* Teks judul tebal */
+        .paragraf p span {
+            font-weight: bold;
+            font-size: 1.3em;
+        }
+
+        /* Garis pemisah (benang kusut bercahaya, warna sesuai LB section) */
+        .separator {
+            width: 100%;
+            height: 50px;
+            position: relative;
+            overflow: hidden;
+        }
+        .separator::before {
+            content: '';
+            position: absolute;
+            width: 200%;
+            height: 50px;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="500" height="50"><path d="M0 25 Q50 0 100 25 T500 25" stroke="white" stroke-width="1" fill="none"/><path d="M0 25 Q50 50 100 25 T500 25" stroke="white" stroke-width="1" fill="none"/><path d="M0 15 Q40 35 120 5 T500 15" stroke="white" stroke-width="1" fill="none"/></svg>');
+            background-size: cover;
+            animation: blink 0.3s infinite alternate;
+        }
+
+        /* Animasi berkedip cepat */
+        @keyframes blink {
+            0% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.3;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Section 1 -->
+    <div class="section-1">
+        <div class="paragraf paragraf-1">
+            <p><span>Burung:</span> Burung adalah hewan yang dikenal dengan kemampuan terbangnya. Mereka memiliki sayap yang memungkinkan mereka untuk menjelajahi langit. Burung juga memiliki berbagai macam suara yang bisa digunakan untuk berkomunikasi atau menarik perhatian pasangannya.</p>
+        </div>
+    </div>
+    <div class="separator"></div>
+
+    <!-- Section 2 -->
+    <div class="section-2">
+        <div class="paragraf paragraf-2">
+            <p><span>Ular:</span> Ular adalah reptil yang memiliki tubuh panjang dan ramping. Mereka tidak memiliki kaki, tetapi bergerak dengan cara melata. Ular seringkali ditemukan di hutan atau gurun, dan beberapa jenis ular berbahaya dengan bisa yang mematikan.</p>
+        </div>
+    </div>
+    <div class="separator"></div>
+
+    <!-- Section 3 -->
+    <div class="section-3">
+        <div class="paragraf paragraf-3">
+            <p><span>Kodok:</span> Kodok adalah amfibi yang biasanya hidup di dekat perairan. Mereka memiliki kulit yang lembab dan tubuh yang cenderung gemuk. Kodok dikenal dengan loncatannya yang tinggi dan suaranya yang khas saat musim kawin.</p>
+        </div>
+    </div>
+    <div class="separator"></div>
+
+    <!-- Section 4 -->
+    <div class="section-4">
+        <div class="paragraf paragraf-4">
+            <p><span>Ayam:</span> Ayam adalah unggas yang sering dijadikan hewan peliharaan dan sumber pangan. Mereka memiliki bulu yang halus dan kokok yang khas. Ayam juga menghasilkan telur yang berguna sebagai makanan sehari-hari.</p>
+        </div>
+    </div>
+    <div class="separator"></div>
+
+</body>
+</html>
